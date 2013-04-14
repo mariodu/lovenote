@@ -1,0 +1,211 @@
+@import 'application';
+body#letter{
+  .font-face('digital');
+  margin: 0;
+  padding: 0;
+  background: #FFFFEE;
+  font-size: 12px;
+  overflow: auto;
+  #letter-content{
+    width: 100%;
+    height: 100%;
+    #letter-words{
+      float: left;
+      width: 440px;
+      height: 400px;
+      color: #333;
+      font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+      font-size: 12px;
+      #agreeBtn, #disagreeBtn{
+        float: left;
+        margin-top: 20px;
+        background: #60cb1b;
+        font-size: 16px;
+        padding: 10px 15px;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-shadow: 0 0 5px rgba(255, 255, 255, 0.6) inset, 0 0 3px rgba(220, 120, 200, 0.8);
+        -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.6) inset, 0 0 3px rgba(220, 120, 200, 0.8);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.6) inset, 0 0 3px rgba(220, 120, 200, 0.8);
+        -webkit-animation-name: "buttonLight";
+        -webkit-animation-duration: 5s;
+        -webkit-animation-iteration-count: infinite;
+        &:hover{
+          opacity: 0.9;
+        }
+      }
+      #disagreeBtn{
+        margin-left: 80px;
+        background-color: rgb(140, 201, 102);
+        color: rgb(224, 245, 214);
+      }
+      @-webkit-keyframes 'buttonLight'{
+        from{
+          -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 200, 0.5);
+        }
+        25%{
+          -webkit-box-shadow: 0 0 20px rgba(255, 155, 255, 0.5) inset, 0 0 8px rgba(120, 120, 200, 0.8);
+        }
+        50%{
+          -webkit-box-shadow: 0 0 5px rgba(155, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 100, 1);
+        }
+        75%{
+          -webkit-box-shadow: 0 0 20px rgba(255, 155, 255, 0.5) inset, 0 0 8px rgba(120, 120, 200, 0.8);
+        }
+        to{
+          -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 200, 0.5);
+        }
+      }
+    }
+  }
+  #loveHeart{
+    float: left;
+    width: 670px;
+    height: 625px;
+    #garden{
+      width: 100%;
+      height: 100%;
+    }
+    #words{
+      font-family: "sans-serif";
+      width: 500px;
+      font-size: 24px;
+      color:#666;
+      #messages{
+        display: none;
+        margin-top: -5%;
+        #lover-name{
+          text-align: center;
+          padding-left: 30px;
+          text-decoration: underline;
+        }
+        #love-word{
+          text-align: center;
+          padding-top: 5px;
+        }
+        #elapseClock{
+          text-align: right;
+          font-size: 18px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          .digit{
+            font-family: "digital";
+            font-size: 36px;
+          }
+        }
+      }
+      #loveu{
+        padding: 5px;
+        font-size: 22px;
+        margin-top: 90px;
+        margin-right: 105px;
+        text-align: right;
+        display: none;
+        .signature{
+          margin-top: 10px;
+          font-size: 20px;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  #errorMsg{
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    position: absolute;
+    top: 100px;
+    left:0px;
+  }
+}
+
+.mybtn{
+  position: relative;
+  padding: 4px 12px;
+  margin: 0;
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding;
+  cursor: pointer;
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f1f1f1));
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background-image: -o-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background-image: linear-gradient(to bottom, #f5f5f5, #f1f1f1);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff1f1f1', GradientType=0);
+  border: 1px solid #dcdcdc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  &:hover{
+    text-shadow: none;
+    border-color: #c6c6c6;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top, #f8f8f8, #f1f1f1);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8f8f8), to(#f1f1f1));
+    background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+    background-image: -o-linear-gradient(top, #f8f8f8, #f1f1f1);
+    background-image: linear-gradient(to bottom, #f8f8f8, #f1f1f1);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#fff1f1f1', GradientType=0);
+    background-position: 0 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+  &:active{
+    background-image: none;
+    outline: 0;
+    background: #e8e8e8;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4;
+    background-image: -moz-linear-gradient(top, #f6f6f6, #f1f1f1);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#f1f1f1));
+    background-image: -webkit-linear-gradient(top, #f6f6f6, #f1f1f1);
+    background-image: -o-linear-gradient(top, #f6f6f6, #f1f1f1);
+    background-image: linear-gradient(to bottom, #f6f6f6, #f1f1f1);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff6f6f6', endColorstr='#fff1f1f1', GradientType=0);
+  }
+  &:focus{
+   border-color: #4d90fe;
+   outline-style: none;
+   background-color: #f3f3f3;
+ }
+}
+
+#returnBtn{
+  float: left;
+  margin-top: 20px;
+}
+
+.ui-widget-overlay{
+  background: #aaaaaa url(img/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+  opacity: .30;
+  filter: Alpha(Opacity=30);
+}

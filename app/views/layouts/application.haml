@@ -1,0 +1,38 @@
+!!! 5
+%html{:lang => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    %title= [@title, itext("title")].compact.join(" | ")
+    = stylesheet_link_tag 'reset', Rack::Less.stylesheet('application'), 'jquery-ui', 'jquery.pnotify.default'
+    - if @less_need
+      = stylesheet_link_tag Rack::Less.stylesheet(@less_need)
+    = stylesheet_link_tag 'bootstrap/bootstrap', 'bootstrap/bootstrap-responsive', 'bootstrap/google-bootstrap'
+    = stylesheet_link_tag 'jquery.fancybox', 'jquery.fancybox-buttons', 'jquery.fancybox-thumbs'
+    = javascript_include_tag "jquery", "jquery-migrate-1.1.0.min"
+    = javascript_include_tag "jquery-ui", "pnotify/jquery.pnotify"
+    = javascript_include_tag "fancybox/jquery.fancybox", "bootstrap/bootstrap", "resizeImg"
+    = javascript_include_tag 'require', "data-main" => "javascripts/application"
+    - if @js_need
+      :javascript
+        require(#{@js_need})
+    = yield_content :include
+  - if @body_id
+    %body{ :id => @body_id}
+      #loading
+        #mask
+        #load
+          .heart
+          .heart
+          .heart
+          .heart
+      = yield
+  - else
+    %body
+      #loading
+        #mask
+        #load
+          .heart
+          .heart
+          .heart
+          .heart
+      = yield

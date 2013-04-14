@@ -1,0 +1,25 @@
+- @title = "The Letter To You"
+- @body_id = :letter
+- @js_need = ["garden", "pnotify/jquery.pnotify", "letter"]
+- @less_need = 'letter'
+- @css_need = ['bootstrap/bootstrap', 'jquery.pnotify.default']
+#letter-content
+  #letter-words
+    %span= "Test"
+    - if current_user.readed == false
+      %a{ :href => "javascript:;", :id => "agreeBtn"}= "Yes, I do!"
+      %a{ :href => "javascript:;", :id => "disagreeBtn"}= "NO!!!!!"
+    - else
+      %a{ :href => "javascript:;", :id => "returnBtn", :class => :mybtn}= itext("return")
+  #loveHeart
+    %canvas#garden
+    #words
+      #messages
+        #lover-name= "Sun Shuning"
+        #love-word= "I have fallen in love with you for"
+        #elapseClock
+      #loveu
+        = "Love u forever and ever."
+        %br/
+        .signature= "- MarioDu"
+#copyright

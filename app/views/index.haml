@@ -1,0 +1,44 @@
+- @title = itext("index")
+- @body_id = "index"
+- @js_need = ["index"]
+- @less_need = 'home'
+
+#page
+  %header#header
+    #header-box
+      .logo
+        = link_to('', '/')
+      #header-search
+        - form_tag(url('/search/?'), :id => 'searchForm') do
+          = text_field_tag :search_key, :class => :search, :placeholder => itext('search_placeholder'), :maxlength => 20, :style => "color: rgb(136, 136, 136)"
+      %menu.main-nav
+        %li.home-select
+          = link_to(itext('index'), '/')
+        %li.more
+          = link_to(itext('more_feature'), '/')
+      .user-notice
+        = link_to(itext('message'), 'javascript:;', :class => "notice-icon")
+        .news-feed
+          = link_to(6, '#', :title => itext('message_count', :count => 6))
+        .notice_content
+      .user-menu
+        = link_to(itext('function'), 'javascript:;', :class => "fun-list")
+  #page-content
+    .sub-header
+      .publisher-nav
+        = link_to(image_tag('test.jpg', :alt => itext("my_portrait"), :onload => "$.fn.resizeImg(this, 100, 100)"), '#', :class => 'portrait')
+        %ul
+          %li.publisher-text
+            = link_to(itext("text"), "#")
+          %li.publisher-picture
+            = link_to(itext("picture"), "#")
+          %li.publisher-video
+            = link_to(itext("video"), "#")
+          %li.publisher-event
+            = link_to(itext("event"), "#")
+          %li.publisher-more
+            = link_to(itext("more"), "#")
+    %p= "test"
+    #uyan_frame
+    %script{:type => "text/javascript", :src => "http://v1.uyan.cc/js/iframe.js?UYUserId=1562818", :async => ""}
+.gotop

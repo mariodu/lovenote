@@ -1,0 +1,243 @@
+@import 'application';
+#login_container{
+  a{
+    -webkit-transition-property: color, background-color;
+    -moz-transition-property: color, background-color;
+    -o-transition-property: color;
+    -ms-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    -ms-transition-timing-function: ease;
+    transition-timing-function: ease;
+  }
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  -moz-background-size:cover;
+  -webkit-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+
+  .footer{
+    position: absolute;
+    top: 90%;
+    left: 15%;
+    .about-icon{
+      line-height: 20px;
+      padding-left: 20px;
+      display: inline-block;
+      background: url('../../images/login-icon.png') -334px -4px no-repeat;
+      display: inline-block;
+    }
+    a {
+      line-height: 20px;
+      display: inline-block;
+      margin-right: 10px;
+      margin-left: 10px;
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      text-shadow: 2px 3px 2px #000000;
+      &:hover{
+        color: #00b9bd;
+      }
+    }
+    span{
+      font-size: 14px;
+      color: #ffffff;
+      display: inline:;
+      text-shadow: 2px 3px 2px #000000;
+    }
+  }
+
+  #login_content{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    height: 397px;
+    color: #fff;
+    #word_one, #word_two, #word_three, #login_main .username, #login_main .password, .group-btn{
+      display: inline-blcok;
+      background: none repeat scroll 0 0 rgba(25, 25, 26, 0.93);
+      filter: alpha(opacity=85);
+      padding: 0;
+      span{
+        display: block;
+        width: 333px;
+        float: right;
+        background-repeat: no-repeat;
+        background-image: url('../../images/login-word.png');
+      }
+    }
+    #login_word{
+      text-indent: -99999px;
+      li{
+        padding-top: 5px;
+      }
+      #word_one{
+        width: 405px;
+        height: 65px;
+        background-position: -100px 0;
+        span{
+          width: 212px;
+          height: 65px;
+          background-position: 0 0;
+        }
+      }
+      #word_two{
+        width: 540px;
+        height: 55px;
+        span{
+          width: 347px;
+          height: 55px;
+          background-position: 0 -72px;
+        }
+      }
+      #word_three{
+        width: 490px;
+        height: 62px;
+        span{
+          width: 300px;
+          height: 62px;
+          background-position: 0 -125px;
+        }
+      }
+    }
+    #login_main{
+      max-width: 640px;
+      .group-btn{
+        width: 526px;
+        height: 60px;
+        padding-top: 10px;
+        .input-btn {
+          background: url('../../images/login-button.png') no-repeat;
+          width: 130px;
+          height: 47px;
+          margin: 0 8px 0 190px;
+          border: none;
+          cursor: pointer;
+          text-align: left;
+          text-indent: -9999px;
+          &:hover{
+            background: url('../../images/login-hover.png') no-repeat;
+          }
+        }
+      }
+      .username, .password, .group-btn{
+        float: left;
+        clear: left;
+      }
+      .username, .password{
+        display: inline-block;
+      }
+      .group{
+        height: 52px;
+        .group-input{
+          position: relative;
+          margin-right: 10px;
+          margin-left: 190px;
+          display: inline;
+          float: left;
+          width: 326px;
+          height: 46px;
+          background: #030302;
+          overflow: hidden;
+          border: none;
+          color: #666;
+          line-height: 46px;
+          font-size: 18px;
+          font-weight: normal;
+          label{
+            color: #333;
+            cursor: text;
+            font-size: 18px;
+            left: 13px;
+            position: absolute;
+            top: 1px;
+            font-weight: normal;
+            display: block;
+            visibility: visible;
+          }
+        }
+        p{
+          float: left;
+          width: 96px;
+          height: 52px;
+          overflow: hidden;
+          font-size: 14px;
+          font-weight: bold;
+          color: #ed4e34;
+          line-height: 52px;
+          visibility: hidden;
+          margin-left: -96px;
+          opacity: 0;
+        }
+        .prompt{
+          line-height: 22px;
+        }
+        .group-input-box{
+          margin-top: 5px;
+          border-bottom: 1px solid #333;
+        }
+        .input-username, .input-password{
+          float: left;
+          display: inline;
+          text-indent: 10px;
+          font-family: Arial;
+          width: 326px;
+          height: 46px;
+          overflow: hidden;
+          border: none;
+          color: #666;
+          line-height: 46px;
+          font-size: 18px;
+          font-weight: normal;
+          background: none repeat scroll 0 0 rgba(25, 35, 25, 0.75);
+        }
+        .input-password{
+          width: 278px;
+          border-right: 1px solid #333;
+          background: none repeat scroll 0 0 rgba(25, 35, 25, 0.75);
+        }
+      }
+      .remember {
+        display: block;
+        width: 47px;
+        height: 46px;
+        float: left;
+        text-indent: -99999px;
+        background: url('../../images/login-icon.png') -3px -12px no-repeat;
+        &:hover{
+          background-position: -59px -12px;
+        }
+      }
+      .remember-select {
+        display: block;
+        width: 47px;
+        height: 46px;
+        float: left;
+        text-indent: -99999px;
+        background: url('../../images/login-icon.png') -37px -73px no-repeat;
+        &:hover{
+          background-position: -59px -12px;
+        }
+      }
+    }
+  }
+}

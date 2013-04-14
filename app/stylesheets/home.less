@@ -1,0 +1,227 @@
+// #F16B8A
+body#index{
+  padding: 200px 0 0;
+  a{
+    -webkit-transition-property: color, background-color;
+    -moz-transition-property: color, background-color;
+    -o-transition-property: color;
+    -ms-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    -ms-transition-timing-function: ease;
+    transition-timing-function: ease;
+  }
+  #page{
+    header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: url(../../images/top_bar_bg.png) center -5px no-repeat;
+      z-index: 200;
+      transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -webkit-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      #header-box{
+        width: 905px;
+        height: 80px;
+        margin: 0 auto;
+        .logo{
+          display: inline;
+          float: left;
+          width: 220px;
+          height: 50px;
+          margin: 20px 0 0 81px;
+          a{
+            display: block;
+            width: 220px;
+            height: 50px;
+          }
+        }
+        #header-search{
+          display: block;
+          float: left;
+          width: 180px;
+          height: 30px;
+          margin: 30px 0 0 18px;
+          .search{
+            width: 146px;
+            height: 30px;
+            padding-left: 35px;
+            line-height: 30px;
+            font-size: 14px;
+            color: #888;
+            filter: alpha(opacity=90);
+            -moz-opacity: 0.90;
+            opacity: 0.90;
+            background: #FAB9B9 url('../../images/header-icon.png') 5px 4px no-repeat;
+            border: none;
+          }
+        }
+        .main-nav{
+          display: inline;
+          float: left;
+          height: 28px;
+          line-height: 28px;
+          margin: 38px 0 0 105px;
+          z-index: 200;
+          li{
+            display: inline;
+            float: left;
+            margin: 0 15px;
+            z-index: 79;
+            a{
+              color: #888;
+              text-decoration: none;
+              font-weight: bold;
+            }
+          }
+          .home-select{
+            position: relative;
+            font-size: 20px;
+            a{
+              color: #b5dbdc;
+            }
+          }
+        }
+        .user-notice{
+          position: relative;
+          float: left;
+          display: inline;
+          width: 20px;
+          height: 16px;
+          padding-top: 6px;
+          margin-top: 38px;
+          cursor: pointer;
+          .notice-icon{
+            display: block;
+            width: 20px;
+            height: 17px;
+            background: url(../../images/header-icon03.png) -124px -106px no-repeat;
+            text-indent: -2000px;
+          }
+          .news-feed{
+            position: absolute;
+            top: -10px;
+            left: 12px;
+            height: 26px;
+            padding: 0 3px;
+            line-height: 20px;
+            a{
+              display: inline-block;
+              height: 20px;
+              line-height: 19px;
+              padding: 0 5px 0 4px;
+              background-color: #ed4e34;
+              text-decoration: none;
+              color: #fff;
+            }
+          }
+        }
+        .user-menu{
+          position: relative;
+          float: left;
+          display: inline;
+          width: 20px;
+          height: 20px;
+          margin: 41px 0 0 25px;
+          z-index: 200;
+          .fun-list{
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url(../../images/header-icon03.png) -43px -46px no-repeat;
+            text-indent: -2000px;
+          }
+        }
+      }
+    }
+  }
+  #page-content{
+    width: 100%;
+    position: relative;
+    .sub-header{
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background-color: #B5DBDC;
+      text-align: center;
+      border-bottom: 1px solid #fff;
+      z-index: 60;
+      zoom: 1;
+      overflow: hidden;
+      transition-property: height, top;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+      -moz-transition-property: height, top;
+      -moz-transition-duration: 0.3s;
+      -moz-transition-timing-function: ease-out;
+      -webkit-transition-property: height, top;
+      -webkit-transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      -o-transition-property: height, top;
+      -o-transition-duration: 0.3s;
+      -o-transition-timing-function: ease-out;
+      .publisher-nav{
+        width: 985px;
+        margin: 0 auto;
+        text-align: left;
+        transition: margin 0.3s ease-out 0s;
+        -moz-transition: margin 0.3s ease-out 0s;
+        -webkit-transition: margin 0.3s ease-out 0s;
+        -o-transition: margin 0.3s ease-out 0s;
+        .portrait{
+          float: left;
+          width: 100px;
+          height: 100px;
+          overflow: hidden;
+        }
+        li{
+          float: left;
+          width: 123px;
+          height: 100px;
+          border: 1px solid #fff;
+          border-width: 0 1px 0 0;
+          a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../../images/publisher-nav.png) no-repeat left top;
+            text-indent: -9999px;
+            transition: background-position 0.3s ease-in-out;
+            -moz-transition: background-position 0.3s ease-in-out;
+            -webkit-transition: background-position 0.3s ease-in-out;
+            -o-transition: background-position 0.3s ease-in-out;
+            outline: 0;
+          }
+        }
+        li.publisher-text a{
+          background-position: 5px 0;
+        }
+        li.publisher-picture a{
+          background-position: -107px 0;
+        }
+        li.publisher-video a{
+          background-position: -220px 0;
+        }
+        li.publisher-event a{
+          background-position: -331px 0;
+        }
+        li.publisher-more a{
+          background-position: -447px 0;
+        }
+      }
+    }
+  }
+}

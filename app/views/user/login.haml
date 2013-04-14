@@ -1,0 +1,38 @@
+- @title = itext('login')
+- @js_need = ["resizeImg", "login"]
+- @less_need = 'login'
+#login_container
+  #login_bg
+    = image_tag('index.jpg')
+  #login_content
+    %ul#login_word
+      %li#word_one
+        %span="Hello!"
+      %li#word_two
+        %span="Welcome to"
+      %li#word_three
+        %span=itext("title")
+    #login_main
+      - form_tag(url('/login/?'), :class => 'loginForm') do
+        .group.username
+          .group-input.group-input-box
+            = text_field_tag :username, :value => params[:username], :class =>  "input-username", :id => :username
+            %label{ :for => :username}= itext('username')
+          %p#usernameErro.prompt= itext('usernameNil')
+        .group.password
+          .group-input.group-input-box
+            = password_field_tag :password, :value => params[:password], :class =>  "input-password", :id => :password
+            %label{ :for => :password}= itext('password')
+            %a.remember{ :href => "javascript:;", :title => itext('unautologin')}= itext('autologin')
+          %p#pwdErro.prompt= itext('passwordNil')
+          = hidden_field_tag :autoLogin, :value => false, :id => :autoLogin
+        .group-btn
+          = submit_tag itext('login'), :id => "login-btn", :class => "input-btn"
+          %p.tip
+            %a.fogetPwd{ :href => '/fogetpwd' }= itext('fogetPwd')
+  .footer
+    %p.about
+      %span.about-icon= "Designed by "
+      %a{:href => "dujiakun.com"}= "MarioDu"
+      %span= "For His Lover "
+      %a{:href => "#"}= "Sun Shuning"
